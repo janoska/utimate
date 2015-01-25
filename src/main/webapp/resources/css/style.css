@@ -1,0 +1,157 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#background {
+    background-image: url('/resources/img/background.jpg');
+    background-position-x: 100%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#subwrapper {
+    height: 800px;
+    background: url('/resources/img/student.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#beforeloginTag {
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+    opacity: 0.8;
+    border-radius: 20px;
+    background: #F8F8F8;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#leftTag {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    float: left;
+    width: 600px;
+    height: 580px;
+    opacity: 0.8;
+    border-radius: 20px;
+    background: #F8F8F8;
+    padding: 35px;
+}
+
+#rightTag {
+    margin-top: 100px;
+    float: right;
+    width: 300px;
+    height: 420px;
+    opacity: 0.8;
+    border-radius: 20px;
+    background: #F8F8F8;
+    padding: 35px;
+}
+
+#leftTitleLine {
+    margin: 0 auto;
+    width: 580px;
+    height: 2px;
+    border: 1px solid lightgray;
+
+}
+
+#rightTitleLine {
+    margin: 0 auto;
+    width: 280px;
+    height: 2px;
+    border: 1px solid lightgray;
+
+}
+
+.materii {
+    margin: 0 auto;
+    width: 280px;
+    height: 100px;
+}
+
+.materiiText {
+    text-align: center;
+}
+
+#materials {
+    margin-top: 10px;
+}
+
+.distance {
+    padding-bottom: 15px;
+}
+
+progress {
+    width: 400px;
+    height: 20px;
+    /*margin: 50px auto;*/
+    display: block;
+    /* Important Thing */
+    -webkit-appearance: none;
+    border: none;
+}
+
+/* All good till now. Now we'll style the background */
+progress::-webkit-progress-bar {
+    background: lightblue;
+    border-radius: 50px;
+    padding: 2px;
+    box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+    border-radius: 50px;
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+    background:
+    -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+    -webkit-linear-gradient(left, dodgerblue, deepskyblue);
+
+    /* Looks great, now animating it */
+    background-size: 25px 14px, 100% 100%, 100% 100%;
+    -webkit-animation: move 5s linear 0 infinite;
+}
+
+/* That's it! Now let's try creating a new stripe pattern and animate it using animation and keyframes properties  */
+
+@-webkit-keyframes move {
+    0% {background-position: 0px 0px, 0 0, 0 0}
+    100% {background-position: -100px 0px, 0 0, 0 0}
+}
+
+#centeredTag {
+    margin: 0 auto;
+    width: 700px;
+    min-height: 100px;
+    overflow: hidden;
+    opacity: 0.8;
+    border-radius: 20px;
+    background: #F8F8F8;
+    padding: 35px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.gray {
+    color: gray;
+}

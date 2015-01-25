@@ -1,0 +1,88 @@
+div label input {
+    margin-right: 100px;
+}
+
+.answers {
+    margin:8px;
+    background-color:#EFEFEF;
+    border-radius:5px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+}
+
+.answers:hover {
+    background: lightskyblue;
+}
+
+.answers label {
+    float:left;
+    width: 400px;
+}
+
+.answers label span {
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+}
+
+.answers label input {
+    position:absolute;
+    top:-20px;
+}
+
+.answers input:checked + span {
+    background-color:blue;
+    color:#fff;
+}
+
+#questionWindow {
+    border-radius: 20px;
+    width: 600px;
+    height: 100px;
+    border: 3px solid lightgray;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#answerButtons {
+    width: 440px;
+    margin: 0 auto;
+    height: 170px;
+    margin-top: 20px;
+}
+
+#responseButton {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#InfoWindow {
+    width: 250px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius:10px;
+    border: 3px solid lightgrey;
+    padding: 10px;
+}
+
+#stopGame {
+    width: 250px;
+    float: right;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius:10px;
+    border: 3px solid lightgrey;
+    padding: 10px;
+    text-align: center;
+}
+
+#gameImg {
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+}
+
+#questionText {
+    text-align: center;
+}

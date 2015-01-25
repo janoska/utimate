@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--<mvc:annotation-driven/>-->
+    <!--<mvc:resources mapping="/resources/**" location="resources/"/>-->
+
+    <bean id="dbConnection" class="storage.DbConnection">
+        <property name="address" value="127.5.182.130:3306/iaubaculejer" />
+        <property name="user" value="adminvf4fSk7" />
+        <property name="password" value="7bskEuCydC2V" />
+    </bean>
+
+    <bean id="dSource" class="storage.DataSource">
+        <property name="dbConnection" ref="dbConnection" />
+    </bean>
+
+    <bean id="gameManager" class="game.GameManager" scope="session">
+        <aop:scoped-proxy />
+        <property name="dataSource" ref="dSource" />
+    </bean>
+
+    <bean id="profileManager" class="profile.ProfileManager" scope="prototype">
+        <property name="dataSource" ref="dSource" />
+    </bean>
+
+    <bean id="userManager" class="home.UserManager" scope="prototype">
+        <property name="dataSource" ref="dSource" />
+    </bean>
+
+    <bean id="rankManager" class="rank.RankManager" scope="session">
+        <aop:scoped-proxy />
+        <property name="dataSource" ref="dSource" />
+    </bean>
+
+    <bean class="home.UserUtils" scope="session" >
+        <aop:scoped-proxy />
+    </bean>
+
+</beans>
